@@ -1,3 +1,33 @@
-<p>
-  admin works!
-</p>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Add new produce to the Farmers Market</h3>
+  </div>
+  <div class="panel-body">
+    <div>
+      <div>
+        <label>Produce:</label>
+        <br>
+        <input #newProduce>
+      </div>
+
+      <div>
+        <label>Farmer:</label>
+        <br>
+        <input #newFarmer>
+      </div>
+
+      <div>
+        <label>Produce Description:</label>
+        <br>
+        <textarea #newDescription></textarea>
+      </div>
+
+      <div>
+        <label>Booth Number:</label>
+        <br>
+        <input #newBoothNum>
+      </div>
+      <button (click)="submitForm(newProduce.value, newFarmer.value, newDescription.value, newBoothNum.value); newProduce.value=''; newFarmer.value=''; newDescription.value=''; newBoothNum.value=''">Add</button>
+    </div>
+  </div>
+</div>
