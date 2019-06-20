@@ -20,6 +20,6 @@ export class MarketplaceComponent implements OnInit {
   }
 
   goToDetailPage(clickedFarmer: Farmer) {
-    // this.router.navigate(['farmers', clickedFarmer.id]);
+    this.router.navigate(['farmers', clickedFarmer.$key]);
   };
 }

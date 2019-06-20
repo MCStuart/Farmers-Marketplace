@@ -18,11 +18,7 @@ export class FarmerService {
     this.farmers.push(newFarmer);
   }
 
-  getFarmerById(farmerId: number){
-    // for (var i = 0; i <= FARMERS.length - 1; i++) {
-    //   if (FARMERS[i].id === farmerId) {
-    //     return FARMERS[i];
-    //   }
-    // }
+  getFarmerById(farmerId: string){
+   return this.database.object('farmers/' + farmerId);
   }
 }

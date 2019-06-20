@@ -3,6 +3,7 @@ import { ActivatedRoute, Params } from '@angular/router';
 import { Location } from '@angular/common';
 import { Farmer } from './farmer.model';
 import { FarmerService } from '../farmer.service';
+import { FirebaseObjectObservable } from 'angularfire2/database';
 
 @Component({
   selector: 'app-farmer',
@@ -13,8 +14,8 @@ import { FarmerService } from '../farmer.service';
 
 export class FarmerComponent implements OnInit {
   
-  farmerId: number;
-  farmerToDisplay: Farmer;
+  farmerId: string;
+  farmerToDisplay;
 
   constructor(
     private route: ActivatedRoute,
@@ -23,11 +24,12 @@ export class FarmerComponent implements OnInit {
      ) { }
 
   ngOnInit() {
-    // this.route.params.forEach((urlParameters) => {
-    //   this.farmerId = parseInt(urlParameters['id']);
-    // });  
-    // this.farmerToDisplay = this.farmerService.getFarmerById(this.farmerId);
-  }
+    this.route.params.forEach((urlParameters) => {
+      this.farmerId = urlParameters['id'];
+    });
+    this.farmerToDisplay = this.farmerService.getFarmerById(this.farmerId);
+   }
+ 
 
 
 }
