@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { Farmer } from './farmer/farmer.model';
-import { FARMERS } from './farmer/mock-farmers';
 import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
 
 @Injectable()
@@ -15,11 +14,15 @@ export class FarmerService {
     return this.farmers;
   }
 
+  addFarmer(newFarmer: Farmer) {
+    this.farmers.push(newFarmer);
+  }
+
   getFarmerById(farmerId: number){
-    for (var i = 0; i <= FARMERS.length - 1; i++) {
-      if (FARMERS[i].id === farmerId) {
-        return FARMERS[i];
-      }
-    }
+    // for (var i = 0; i <= FARMERS.length - 1; i++) {
+    //   if (FARMERS[i].id === farmerId) {
+    //     return FARMERS[i];
+    //   }
+    // }
   }
 }

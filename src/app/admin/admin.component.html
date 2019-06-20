@@ -22,12 +22,7 @@
         <textarea #newDescription></textarea>
       </div>
 
-      <div>
-        <label>Booth Number:</label>
-        <br>
-        <input #newBoothNum>
-      </div>
-      <button (click)="submitForm(newProduce.value, newFarmer.value, newDescription.value, newBoothNum.value); newProduce.value=''; newFarmer.value=''; newDescription.value=''; newBoothNum.value=''">Add</button>
+      <button (click)="submitForm(newProduce.value, newFarmer.value, newDescription.value); newProduce.value=''; newFarmer.value=''; newDescription.value=''">Add</button>
     </div>
   </div>
 </div>
