@@ -15,6 +15,7 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireAuthModule, AngularFireAuth } from 'angularfire2/auth';
 
 
+
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
   authDomain: masterFirebaseConfig.authDomain,
@@ -37,7 +38,7 @@ export const firebaseConfig = {
     BrowserModule,
     AppRoutingModule,
     routing,
-    AngularFireModule,
+    AngularFireModule.initializeApp(firebaseConfig),
     AngularFireDatabaseModule
   ],
   providers: [],
