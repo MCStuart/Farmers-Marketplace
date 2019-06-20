@@ -5,15 +5,15 @@
   <div class="panel-body">
     <div>
       <div>
-        <label>Produce:</label>
-        <br>
-        <input #newProduce>
-      </div>
-
-      <div>
         <label>Farmer:</label>
         <br>
         <input #newFarmer>
+      </div>
+      
+      <div>
+        <label>Produce:</label>
+        <br>
+        <input #newProduce>
       </div>
 
       <div>
@@ -22,7 +22,7 @@
         <textarea #newDescription></textarea>
       </div>
 
-      <button (click)="submitForm(newProduce.value, newFarmer.value, newDescription.value); newProduce.value=''; newFarmer.value=''; newDescription.value=''">Add</button>
+      <button (click)="submitForm(newFarmer.value, newProduce.value, newDescription.value);newFarmer.value=''; newProduce.value=''; newDescription.value=''">Add</button>
     </div>
   </div>
 </div>

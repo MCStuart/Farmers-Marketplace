@@ -22,12 +22,12 @@ export class FarmerComponent implements OnInit {
      private farmerService: FarmerService
      ) { }
 
-  // ngOnInit() {
+  ngOnInit() {
     // this.route.params.forEach((urlParameters) => {
     //   this.farmerId = parseInt(urlParameters['id']);
     // });  
     // this.farmerToDisplay = this.farmerService.getFarmerById(this.farmerId);
-  // }
+  }
 
 
 }
