@@ -3,9 +3,9 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
-import { AppRoutingModule } from './/app-routing.module';
+import { AppRoutingModule } from './app.routing';
 import { WelcomeComponent } from './welcome/welcome.component';
-import { routing } from './app-routing.module';
+import { routing } from './app.routing';
 import { AboutComponent } from './about/about.component';
 import { MarketplaceComponent } from './marketplace/marketplace.component';
 import { FarmerComponent } from './farmer/farmer.component';
@@ -13,6 +13,7 @@ import { masterFirebaseConfig } from './api-keys';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireAuthModule, AngularFireAuth } from 'angularfire2/auth';
+import { AdminComponent } from './admin/admin.component';
 
 
 
@@ -32,7 +33,8 @@ export const firebaseConfig = {
     WelcomeComponent,
     AboutComponent,
     MarketplaceComponent,
-    FarmerComponent
+    FarmerComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,
